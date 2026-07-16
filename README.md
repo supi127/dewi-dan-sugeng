@@ -1,1 +1,0 @@
-# dewi-dan-sugeng

@@ -1,0 +1,527 @@
+body {
+
+    margin: 0;
+    height: 100vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background:
+    linear-gradient(
+    135deg,
+    #ffffff,
+    #f8e7b8
+    );
+
+    font-family: Arial, sans-serif;
+
+}
+
+
+
+.opening {
+
+    text-align: center;
+
+}
+
+
+
+.envelope {
+
+    position: relative;
+
+    width: 300px;
+    height: 200px;
+
+    background: #d4af37;
+
+    margin: auto;
+
+    border-radius: 10px;
+
+    overflow: hidden;
+
+    box-shadow:
+    0 15px 30px rgba(0,0,0,0.2);
+
+}
+
+
+
+/* Bagian penutup amplop */
+
+.flap {
+
+    position: absolute;
+
+    top:0;
+
+    width:0;
+    height:0;
+
+    border-left:
+    150px solid transparent;
+
+    border-right:
+    150px solid transparent;
+
+    border-top:
+    100px solid #b8860b;
+
+    transform-origin: top;
+
+    transition:
+    1s;
+
+}
+
+
+
+/* Isi kartu */
+
+.letter {
+
+    position:absolute;
+
+    bottom:0;
+
+    background:white;
+
+    width:100%;
+
+    height:140px;
+
+    padding-top:30px;
+
+    transition:
+    1s;
+
+}
+
+
+
+.letter h1 {
+
+    color:#c9a227;
+
+}
+
+
+
+button {
+
+    margin-top:40px;
+
+    padding:15px 35px;
+
+    border:none;
+
+    border-radius:30px;
+
+    background:#d4af37;
+
+    color:white;
+
+    font-size:18px;
+
+    cursor:pointer;
+
+}
+
+
+
+/* Saat amplop terbuka */
+
+.envelope.open .flap {
+
+    transform:
+    rotateX(180deg);
+
+}
+
+
+
+.envelope.open .letter {
+
+    transform:
+    translateY(-80px);
+
+}
+/* Efek bunga jatuh */
+
+.flower {
+    position: fixed;
+    top: -20px;
+    font-size: 25px;
+    animation: fall linear infinite;
+    z-index: 10;
+    pointer-events: none;
+}
+
+
+@keyframes fall {
+
+    0% {
+        transform: translateY(-20px) rotate(0deg);
+        opacity: 1;
+    }
+
+    100% {
+        transform: translateY(100vh) rotate(360deg);
+        opacity: 0;
+    }
+
+}/* Efek Glitter Emas */
+
+.glitter {
+    position: fixed;
+
+    width: 6px;
+    height: 6px;
+
+    background: #d4af37;
+
+    border-radius: 50%;
+
+    box-shadow:
+    0 0 10px #d4af37,
+    0 0 20px #ffd700;
+
+    animation: sparkle 3s infinite;
+
+    pointer-events: none;
+
+    z-index: 5;
+}
+
+
+@keyframes sparkle {
+
+    0% {
+        transform: translateY(0) scale(1);
+        opacity: 0;
+    }
+
+
+    50% {
+        opacity: 1;
+        transform: translateY(-50px) scale(1.5);
+    }
+
+
+    100% {
+        transform: translateY(-100px) scale(0);
+        opacity: 0;
+    }
+
+}/* Foto Pengantin */
+
+
+.couple {
+
+    padding: 50px 20px;
+
+    text-align: center;
+
+}
+
+
+
+.couple h2 {
+
+    color:#c9a227;
+
+    font-size:35px;
+
+}
+
+
+
+.profile {
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    gap:40px;
+
+}
+
+
+
+.person img {
+
+    width:180px;
+
+    height:180px;
+
+    object-fit:cover;
+
+    border-radius:50%;
+
+    border:
+
+    5px solid #d4af37;
+
+    box-shadow:
+
+    0 0 20px rgba(212,175,55,0.5);
+
+}
+
+
+
+.person h3 {
+
+    color:#c9a227;
+
+    font-size:28px;
+
+}
+
+
+
+.person p {
+
+    color:#555;
+
+}
+
+
+
+.heart {
+
+    font-size:40px;
+
+    color:#d4af37;
+
+}
+
+
+
+/* Tampilan HP */
+
+@media(max-width:768px){
+
+    .profile{
+
+        flex-direction:column;
+
+    }
+
+}/* Countdown */
+
+.countdown-section {
+
+    text-align:center;
+
+    padding:60px 20px;
+
+}
+
+
+.countdown-section h2 {
+
+    color:#c9a227;
+
+    font-size:35px;
+
+}
+
+
+
+.countdown {
+
+    display:flex;
+
+    justify-content:center;
+
+    gap:20px;
+
+    margin-top:30px;
+
+}
+
+
+
+.countdown div {
+
+    background:white;
+
+    border:2px solid #d4af37;
+
+    width:90px;
+
+    height:90px;
+
+    border-radius:15px;
+
+    box-shadow:
+    0 5px 15px rgba(0,0,0,0.15);
+
+}
+
+
+
+.countdown span {
+
+    display:block;
+
+    font-size:35px;
+
+    color:#c9a227;
+
+    font-weight:bold;
+
+    margin-top:10px;
+
+}
+
+
+
+.countdown p {
+
+    margin:0;
+
+    color:#555;
+
+}
+
+
+
+@media(max-width:600px){
+
+    .countdown {
+
+        flex-wrap:wrap;
+
+    }
+
+}/* Gallery */
+
+
+.gallery {
+
+    padding:70px 20px;
+
+    text-align:center;
+
+}
+
+
+.gallery h2 {
+
+    color:#c9a227;
+
+    font-size:40px;
+
+}
+
+
+
+.gallery-box {
+
+    display:grid;
+
+    grid-template-columns:
+    repeat(2,1fr);
+
+    gap:20px;
+
+    max-width:800px;
+
+    margin:auto;
+
+}
+
+
+
+.gallery-box img {
+
+    width:100%;
+
+    height:300px;
+
+    object-fit:cover;
+
+    border-radius:20px;
+
+    border:3px solid #d4af37;
+
+    cursor:pointer;
+
+    transition:.5s;
+
+}
+
+
+
+.gallery-box img:hover {
+
+    transform:scale(1.05);
+
+}
+
+
+
+/* Foto besar */
+
+.lightbox {
+
+    display:none;
+
+    position:fixed;
+
+    top:0;
+
+    left:0;
+
+    width:100%;
+
+    height:100%;
+
+    background:
+    rgba(0,0,0,.8);
+
+    justify-content:center;
+
+    align-items:center;
+
+    z-index:99;
+
+}
+
+
+
+.lightbox img {
+
+    max-width:90%;
+
+    max-height:90%;
+
+    border-radius:20px;
+
+}
+
+
+
+@media(max-width:600px){
+
+.gallery-box{
+
+grid-template-columns:1fr;
+
+}
+
+
+.gallery-box img{
+
+height:250px;
+
+}
+
+}

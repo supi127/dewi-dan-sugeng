@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Undangan Sugeng & Dewi</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+
+<body>
+    <audio id="music" loop>
+    <source src="assets/music/music.mp3" type="audio/mp3">
+</audio>
+
+    <div class="opening">
+
+        <div class="envelope" id="envelope">
+
+            <div class="flap"></div>
+
+            <div class="letter">
+                <h1>Sugeng & Dewi</h1>
+                <p>Undangan Pernikahan</p>
+            </div>
+
+        </div>
+
+
+        <button id="openBtn">
+            Buka Undangan
+        </button>
+
+    </div>
+<section class="couple">
+
+    <h2>
+        Mempelai
+    </h2>
+
+
+    <div class="profile">
+
+
+        <div class="person">
+
+            <img src="assets/images/sugeng.jpg">
+
+            <h3>
+                Sugeng
+            </h3>
+
+            <p>
+                Putra dari Bapak & Ibu
+            </p>
+
+        </div>
+
+
+
+        <div class="heart">
+            ❤
+        </div>
+
+
+
+        <div class="person">
+
+            <img src="assets/images/dewi.jpg">
+
+            <h3>
+                Dewi
+            </h3>
+
+            <p>
+                Putri dari Bapak & Ibu
+            </p>
+
+        </div>
+
+
+    </div>
+
+</section> <section class="countdown-section">
+
+    <h2>
+        Menuju Hari Bahagia
+    </h2>
+
+
+    <div class="countdown">
+
+        <div>
+            <span id="days">0</span>
+            <p>Hari</p>
+        </div>
+
+
+        <div>
+            <span id="hours">0</span>
+            <p>Jam</p>
+        </div>
+
+
+        <div>
+            <span id="minutes">0</span>
+            <p>Menit</p>
+        </div>
+
+
+        <div>
+            <span id="seconds">0</span>
+            <p>Detik</p>
+        </div>
+
+    </div>
+
+</section>
+<section class="gallery">
+
+    <h2>
+        Galeri Foto
+    </h2>
+
+
+    <div class="gallery-box">
+
+
+        <img src="assets/images/gallery1.jpg"
+        onclick="openImage(this.src)">
+
+
+
+        <img src="assets/images/gallery2.jpg"
+        onclick="openImage(this.src)">
+
+
+
+        <img src="assets/images/gallery3.jpg"
+        onclick="openImage(this.src)">
+
+
+
+        <img src="assets/images/gallery4.jpg"
+        onclick="openImage(this.src)">
+
+
+
+    </div>
+
+
+</section><section class="location">
+
+    <h2>
+        Lokasi Pernikahan
+    </h2>
+
+
+    <p>
+        Kami menunggu kehadiran Anda
+        di hari bahagia kami.
+    </p>
+
+
+    <iframe
+    src="https://maps.app.goo.gl/gE8KENzvgUi2K7jn9"
+    width="100%"
+    height="350"
+    style="border:0;"
+    allowfullscreen=""
+    loading="lazy">
+    </iframe>
+
+
+    <a 
+    href="https://maps.google.com"
+    target="_blank"
+    class="map-button">
+
+        Buka Google Maps
+
+    </a>
+
+
+</section>
+
+
+
+<!-- Tampilan foto besar -->
+
+<div class="lightbox" id="lightbox"
+onclick="closeImage()">
+
+    <img id="bigImage">
+
+</div>
+<script src="script.js"></script>
+
+</body>
+
+</html>
